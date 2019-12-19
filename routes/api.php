@@ -18,5 +18,8 @@ use Illuminate\Http\Request;
 });*/
 
 Route::group(['namespace' => 'api', 'prefix' => '/'], function() {
+    Route::get('timestamp', 'MicroserviceController@return_current_timestamp');
     Route::get('timestamp/{timestamp}', 'MicroserviceController@return_timestamp');
+    
+    
 });
